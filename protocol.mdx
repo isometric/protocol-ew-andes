@@ -117,7 +117,7 @@ As farm operators join or leave the program, fields may be added or subtracted t
 
 **Baseline sample unit:** A sample unit with no microbial inoculant applied, serving as a reference or control to compare against treated sample units.
 
-**Calcium Carbonate Equivalent (CCE):** the quantity of carbonate (CO32-) in the soil expressed as CaCO<sub>3</sub>and as a weight percentage of the less than 2 mm soil size fraction. CCE represents all inorganic carbon molecules, including carbonate minerals and bicarbonate.
+**Calcium Carbonate Equivalent (CCE):** the quantity of carbonate (CO<sub>3</sub><sup>2-</sup>) in the soil expressed as CaCO<sub>3</sub> and as a weight percentage of the less than 2 mm soil size fraction. CCE represents all inorganic carbon molecules, including carbonate minerals and bicarbonate.
 
 **Carbon Dioxide Removal (CDR):** The process as well as the quantity of carbon dioxide (CO₂ ) removed from the atmosphere due to project activities, typically measured in metric tonnes. This term will be used interchangeably with GHG removal.
 
@@ -456,8 +456,8 @@ All risks that have been identified, along with suggested mitigations and level 
           rigorous soil sampling procedures following best practices outlined in
           this methodology. This procedure consists of stratification of fields
           based on soil texture, random determination of sampling locations, and
-          composites of 5-12 cores for each sampling location (see [Section 13](#monitoring)
-          for more details).
+          composites of 5-12 cores for each sampling location (see [Section
+          13](#monitoring) for more details).
         </td>
         <td>Medium</td>
       </tr>
@@ -626,16 +626,16 @@ To measure SIC generation, both the treated and baseline sample units will have 
 
 In order to quantify the tonnes of CO₂ removed from the atmosphere resulting from the application of microbial inoculant on cropland, the following approach is taken. First, remove all treated and baseline sample units with an average slope greater than 6% from calculations (C slope classification based on the USDA SSURGO database). With the remaining data set, estimate the number of tonnes of CO₂ removed by calculating the difference between the newly generated CCE throughout the growing season (i.e., project monitoring period) measured on treated sample units, compared to the average newly generated CCE throughout the project time frame measured on baseline sample units with the same key properties. This represents the newly generated CCE throughout the project monitoring period directly attributable to the treatment. Finally, convert this CCE into tonnes of CO₂ removed from the atmosphere and incorporate the uncertainty discount and LCA emissions. The details of all associated calculations are outlined below.
 
-1. Calculate the newly generated CCE at each geographical point sampled in treated sample units throughout the project monitoring period ([Equation 1](#equation-1))
-2. Calculate the newly generated CCE at each geographical point sampled in baseline sample units throughout the project monitoring period ([Equation 2](#equation-2))
-3. For each treated sample unit, determine the tonnes of soil per acre within sampled depth ([Equation 3](#equation-3))
-4. For each treated sample unit, determine the average newly generated CCE throughout the project timeframe in the treated sample unit ([Equation 4](#equation-4))
-5. For each baseline sample unit, determine the average newly generated CCE throughout the project timeframe across all geographical points sampled within the baseline sample unit ([Equation 5](#equation-5))
-6. For each baseline category, determine the average newly generated CCE throughout the project timeframe across all baseline sample units within the baseline category ([Equation 6](#equation-6))
-7. For each treated sample unit, determine the newly generated CCE throughout the project time frame directly attributable to the treatment. This is the difference between the newly generated CCE quantified for the treated sample unit and the newly generated CCE quantified for the associated baseline category ([Equation 7](#equation-7))
-8. Using the newly generated CCE quantified in [Equation 7](#equation-7), for each treated sample unit calculate the tonnes of additional CCE generated per acre ([Equation 8](#equation-8))
-9. Using the tonnes of CCE/acre calculated in [Equation 8](#equation-8), calculate the gross tonnes of CO₂ removed from the atmosphere ([Equation 9](#equation-9))
-10. Using the gross tonnes of CO₂ removed calculated in [Equation 9](#equation-9), incorporate the uncertainty discount and LCA emissions to determine the net tonnes of CO₂ removed from the atmosphere ([Equation 10](#equation-10))
+1. Calculate the newly generated CCE at each geographical point sampled in treated sample units throughout the project monitoring period ([Equation 1](#equation-1)).
+2. Calculate the newly generated CCE at each geographical point sampled in baseline sample units throughout the project monitoring period ([Equation 2](#equation-2)).
+3. For each treated sample unit, determine the tonnes of soil per acre within sampled depth ([Equation 3](#equation-3)).
+4. For each treated sample unit, determine the average newly generated CCE throughout the project timeframe in the treated sample unit ([Equation 4](#equation-4)).
+5. For each baseline sample unit, determine the average newly generated CCE throughout the project timeframe across all geographical points sampled within the baseline sample unit ([Equation 5](#equation-5)).
+6. For each baseline category, determine the average newly generated CCE throughout the project timeframe across all baseline sample units within the baseline category ([Equation 6](#equation-6)).
+7. For each treated sample unit, determine the newly generated CCE throughout the project time frame directly attributable to the treatment. This is the difference between the newly generated CCE quantified for the treated sample unit and the newly generated CCE quantified for the associated baseline category ([Equation 7](#equation-7)).
+8. Using the newly generated CCE quantified in [Equation 7](#equation-7), for each treated sample unit calculate the tonnes of additional CCE generated per acre ([Equation 8](#equation-8)).
+9. Using the tonnes of CCE/acre calculated in [Equation 8](#equation-8), calculate the gross tonnes of CO₂ removed from the atmosphere ([Equation 9](#equation-9)).
+10. Using the gross tonnes of CO₂ removed calculated in [Equation 9](#equation-9), incorporate the uncertainty discount and LCA emissions to determine the net tonnes of CO₂ removed from the atmosphere ([Equation 10](#equation-10)).
 
 <figure>
   ![](images/fig3.png)
@@ -650,20 +650,21 @@ In order to quantify the tonnes of CO₂ removed from the atmosphere resulting f
 CCE generation at each geographical point sampled in treated sample units throughout the project monitoring period (i.e., growing season)
 
 $$
-\Delta CCE_{su} = Max[ \\\
+\tag{1}
+\Delta CCE_{su} = Max[
     (CCE_{t=2, su} - CCE_{t=0, su}), \\\
-    (CCE_{t=1, su} - CCE_{t=0, su}), \\\
-    (CCE_{t=2, su} - CCE_{t=1, su}), \\\
+    (CCE_{t=1, su} - CCE_{t=0, su}),
+    (CCE_{t=2, su} - CCE_{t=1, su}),
     0
 ]
 $$
 
 Where:
 
-- $$\Delta CCE_{su}$$ - in CCE (%), CCE generation sampled at a single geographical point in a treated sample unit ($$su$$) throughout the project time frame (e.g., agricultural season)
-- $$CCE_{t=0, su}$$ - in CCE (%), CCE from samples taken at the $$t = 0$$ time point for treated sample units ($$su$$)
-- $$CCE_{t=1, su}$$ - in CCE (%), CCE from samples taken at the $$t = 1$$ time point for treated sample units ($$su$$)
-- $$CCE_{t=2, su}$$ - in CCE (%), CCE from samples taken at the $$t = 2$$ time point for treated sample units ($$su$$)
+- $$\Delta CCE_{su}$$ - in CCE (%), CCE generation sampled at a single geographical point in a treated sample unit ($$su$$) throughout the project time frame (e.g., agricultural season).
+- $$CCE_{t=0, su}$$ - in CCE (%), CCE from samples taken at the $$t = 0$$ time point for treated sample units ($$su$$).
+- $$CCE_{t=1, su}$$ - in CCE (%), CCE from samples taken at the $$t = 1$$ time point for treated sample units ($$su$$).
+- $$CCE_{t=2, su}$$ - in CCE (%), CCE from samples taken at the $$t = 2$$ time point for treated sample units ($$su$$).
 
 Note: If the CCE% measured decreases between two points in time, that is indicative of either the lack of newly generated CCE or CCE moving to deeper soil horizons due to rainfall (Manning, 2008). As a result, if no CCE generation is directly measured, it is assumed to be zero. Given the fact that any CCE generated that moves into soil horizons deeper than what is included in the direct samples is not accounted for, this approach is a conservative estimate. In the future, this methodology can be amended to include a model to incorporate CCE generation that percolates to deeper soil horizons prior to the time direct samples are taken. For treated sample units, if samples are not collected at 2 distinct time points throughout the season for a single geographical point, then that geographical point is excluded from the calculation of CCE generation.
 
@@ -672,20 +673,21 @@ Note: If the CCE% measured decreases between two points in time, that is indicat
 CCE generation at each geographical point sampled in baseline sample units throughout the project monitoring period (i.e., growing season)
 
 $$
-\Delta CCE_{bu} = Max[ \\\
+\tag{2}
+\Delta CCE_{bu} = Max[
     (CCE_{t=2, bu} - CCE_{t=0, bu}), \\\
-    (CCE_{t=1, bu} - CCE_{t=0, bu}), \\\
-    (CCE_{t=2, bu} - CCE_{t=1, bu}), \\\
+    (CCE_{t=1, bu} - CCE_{t=0, bu}),
+    (CCE_{t=2, bu} - CCE_{t=1, bu}),
     0
 ]
 $$
 
 Where:
 
-- $$\Delta CCE_{bu}$$ - in CCE (%), CCE generation sampled at a single geographical point in baseline sample units ($$bu$$) throughout the project time frame (e.g., growing season)
-- $$CCE_{t=0, bu}$$ - in CCE (%), CCE from samples taken at the $$t = 0$$ time point for baseline sample units ($$bu$$)
-- $$CCE_{t=1, bu}$$ - in CCE (%), CCE from samples taken at the $$t = 1$$ time point for baseline sample units ($$bu$$)
-- $$CCE_{t=2, bu}$$ - in CCE (%), CCE from samples taken at the $$t = 2$$ time point for baseline sample units ($$bu$$)
+- $$\Delta CCE_{bu}$$ - in CCE (%), CCE generation sampled at a single geographical point in baseline sample units ($$bu$$) throughout the project time frame (e.g., growing season).
+- $$CCE_{t=0, bu}$$ - in CCE (%), CCE from samples taken at the $$t = 0$$ time point for baseline sample units ($$bu$$).
+- $$CCE_{t=1, bu}$$ - in CCE (%), CCE from samples taken at the $$t = 1$$ time point for baseline sample units ($$bu$$).
+- $$CCE_{t=2, bu}$$ - in CCE (%), CCE from samples taken at the $$t = 2$$ time point for baseline sample units ($$bu$$).
 
 Note: If the CCE% measured decreases between two points in time, that is indicative of either the lack of newly generated CCE or CCE moving to deeper soil horizons due to rainfall (Manning, 2008). As a result, if no CCE generation is directly measured, it is assumed to be zero. Given the fact that any CCE generated that moves into soil horizons deeper than what is included in the direct samples is not accounted for, this approach is a conservative estimate. In the future, this methodology can be amended to include a model to incorporate CCE generation that percolates to deeper soil horizons prior to the time direct samples are taken. In instances where samples are taken at 3 unique time points (i.e., t=0, t=1, t=2), baseline sample units must have samples taken at all 3 time points, else the geographical point must be excluded from the calculation of CCE generation.
 
@@ -694,6 +696,7 @@ Note: If the CCE% measured decreases between two points in time, that is indicat
 Tonnes of soil per acre within sampled depth of the treated sample unit
 
 $$
+\tag{3}
 tonnes\ of\ soil\ /\ acre_{su} = m^3\ of\ soil\ per\ acre \times \\\
 bulk\ density_{su} \times
 \frac{1\ tonne}{1000000 g} \times
@@ -702,9 +705,9 @@ $$
 
 Where
 
-- $$tonnes\ of\ soil\ /\ acre_{su}$$ - in tonnes of soil / acre, tonnes of soil per acre within the sampled depth of the treated sample unit ($$su$$)
-- $$m^3\ of\ soil\ per\ acre$$ - in $$m^3 / acre$$, $$m^3$$ of soil per acre within sampled depth (1233.48 $$m^3$$ of soil per acre in the 0-12" horizon)
-- $$bulk\ density_{su}$$ - in $$g/cm^3$$, the oven dry weight of the less than 2 mm soil material per unit volume of soil at a water tension of 1/3 bar
+- $$tonnes\ of\ soil\ /\ acre_{su}$$ - in tonnes of soil / acre, tonnes of soil per acre within the sampled depth of the treated sample unit ($$su$$).
+- $$m^3\ of\ soil\ per\ acre$$ - in m<sup>3</sup> / acre, m<sup>3</sup> of soil per acre within sampled depth (1233.48 $$m^3$$ of soil per acre in the 0-12" horizon).
+- $$bulk\ density_{su}$$ - in g/cm<sup>3</sup>, the oven dry weight of the less than 2 mm soil material per unit volume of soil at a water tension of 1/3 bar.
 
 Note: there are 1,000,000 grams in 1 metric tonne and 1,000,000cm<sup>3</sup> in 1m<sup>3</sup>
 
@@ -713,48 +716,52 @@ Note: there are 1,000,000 grams in 1 metric tonne and 1,000,000cm<sup>3</sup> in
 Average CCE generation throughout the project time frame in the treated sample unit
 
 $$
+\tag{4}
 Avg.\ \Delta CCE_{su} = \frac{\sum \Delta CCE_{su}}{\#\ of\ points_{su}}
 $$
 
 Where:
 
-- $$Avg.\ \Delta CCE_{su}$$ - in CCE (%), Average CCE generation throughout the project time frame in the treated sample unit ($$su$$)
-- $$\sum \Delta CCE_{su}$$ - in CCE (%), Sum of newly generated CCE during the season from samples taken within the treated sample unit ($$su$$)
-- $$\#\ of\ points_{su}$$ - Number of points sampled (replicates) within the treated sample unit ($$su$$)
+- $$Avg.\ \Delta CCE_{su}$$ - in CCE (%), Average CCE generation throughout the project time frame in the treated sample unit ($$su$$).
+- $$\sum \Delta CCE_{su}$$ - in CCE (%), Sum of newly generated CCE during the season from samples taken within the treated sample unit ($$su$$).
+- $$\#\ of\ points_{su}$$ - Number of points sampled (replicates) within the treated sample unit ($$su$$).
 
 ### Equation 5
 
 Average CCE generation throughout the project time frame within the baseline unit
 
 $$
+\tag{5}
 Avg.\ \Delta CCE_{bu} = \frac{\sum \Delta CCE_{bu}}{\#\ of\ points_{bu}}
 $$
 
 Where:
 
-- $$Avg.\ \Delta CCE_{bu}$$ - in CCE (%), Average CCE generation throughout the project time frame in the baseline sample unit ($$su$$)
-- $$\sum \Delta CCE_{bu}$$ - in CCE (%), Sum of newly generated CCE during the season from samples taken within the baseline sample unit ($$su$$)
-- $$\#\ of\ points_{bu}$$ - Number of points sampled (replicates) within the baseline sample unit ($$su$$)
+- $$Avg.\ \Delta CCE_{bu}$$ - in CCE (%), Average CCE generation throughout the project time frame in the baseline sample unit ($$su$$).
+- $$\sum \Delta CCE_{bu}$$ - in CCE (%), Sum of newly generated CCE during the season from samples taken within the baseline sample unit ($$su$$).
+- $$\#\ of\ points_{bu}$$ - Number of points sampled (replicates) within the baseline sample unit ($$su$$).
 
 ### Equation 6
 
 Average CCE generation throughout the project time frame within the baseline category
 
 $$
+\tag{6}
 Avg.\ \Delta CCE_{bc} = \frac{\sum Avg.\ \Delta CCE_{bu_{bc}}}{\#\ of\ units_{bc}}
 $$
 
 Where:
 
-- $$Avg.\ \Delta CCE_{bc}$$ - in CCE (%), Average CCE generation throughout the project time frame within the baseline category ($$bc$$)
-- $$\sum Avg.\ \Delta CCE_{bu_{bc}}$$ - in CCE (%), Sum of average newly generated CCE during the season from baseline sample units ($$bu$$) (from [equation 5](#equation-5)) within the baseline category ($$bc$$)
-- $$\#\ of\ units_{bc}$$ - Number of baseline sample units within the baseline category ($$bc$$)
+- $$Avg.\ \Delta CCE_{bc}$$ - in CCE (%), Average CCE generation throughout the project time frame within the baseline category ($$bc$$).
+- $$\sum Avg.\ \Delta CCE_{bu_{bc}}$$ - in CCE (%), Sum of average newly generated CCE during the season from baseline sample units ($$bu$$) (from [equation 5](#equation-5)) within the baseline category ($$bc$$).
+- $$\#\ of\ units_{bc}$$ - Number of baseline sample units within the baseline category ($$bc$$).
 
 ### Equation 7
 
 CCE generation throughout the project time frame directly attributable to the treatment
 
 $$
+\tag{7}
 \Delta CCE_{Additional, su} = Max(
     Avg.\ \Delta CCE_{su} - Avg.\ \Delta CCE_{bc}
     0
@@ -763,9 +770,9 @@ $$
 
 Where:
 
-- $$\Delta CCE_{Additional, su}$$ - in CCE (%), CCE generation throughout the project time frame directly attributable to the treatment in each treated sample unit ($$su$$)
-- $$Avg.\ \Delta CCE_{su}$$ - in CCE (%), Average CCE generation throughout the project timeframe in the treated sample unit ($$su$$)
-- $$Avg.\ \Delta CCE_{bc}$$ - in CCE (%), Average CCE generation throughout the project timeframe within the baseline category ($$bc$$)
+- $$\Delta CCE_{Additional, su}$$ - in CCE (%), CCE generation throughout the project time frame directly attributable to the treatment in each treated sample unit ($$su$$).
+- $$Avg.\ \Delta CCE_{su}$$ - in CCE (%), Average CCE generation throughout the project timeframe in the treated sample unit ($$su$$).
+- $$Avg.\ \Delta CCE_{bc}$$ - in CCE (%), Average CCE generation throughout the project timeframe within the baseline category ($$bc$$).
 
 Note: If $$Avg.\ \Delta CCE_{su} - Avg.\ \Delta CCE_{bc} < 0$$, it is assumed that 0 CCE generation can be directly attributed to the treatment in a given sample. Given the soil pH and environmental conditions outlined in the applicability condition section of the methodology, any carbonate species generated would be stable under these conditions. This assumption can be made if the project proponent provides evidence that the microbial inoculant applied does not cause the degradation of CCE using closed system experiments in a laboratory setting.
 
@@ -774,43 +781,46 @@ Note: If $$Avg.\ \Delta CCE_{su} - Avg.\ \Delta CCE_{bc} < 0$$, it is assumed th
 Tonnes of additional CCE generated per acre
 
 $$
-Tonnes\ CCE / acre_{su} = \Delta CCE_{Additional, su} \times \frac{1}{100} \times tonnes\ of\ soil / acre_{su}
+\tag{8}
+Tonnes\ CCE / acre_{su} = \Delta CCE_{Additional, su} \times \frac{1}{100} \\\ \times tonnes\ of\ soil / acre_{su}
 $$
 
 Where:
 
-- $$Tonnes\ CCE / acre_{su}$$ - in tonnes of CCE / acre, Tonnes of CCE generation throughout the project timeframe directly attributable to the treatment in a given treated sample unit ($$su$$)
-- $$\Delta CCE_{Additional, su}$$ - in CCE (%), CCE generation throughout the project time frame directly attributable to the treatment in a given treated sample unit ($$su$$)
-- $$tonnes\ of\ soil / acre_{su}$$ - in tonnes of soil / acre, tonnes of soil per acre within the sampled depth of the treated sample unit ($$su$$)
+- $$Tonnes\ CCE / acre_{su}$$ - in tonnes of CCE / acre, Tonnes of CCE generation throughout the project timeframe directly attributable to the treatment in a given treated sample unit ($$su$$).
+- $$\Delta CCE_{Additional, su}$$ - in CCE (%), CCE generation throughout the project time frame directly attributable to the treatment in a given treated sample unit ($$su$$).
+- $$tonnes\ of\ soil / acre_{su}$$ - in tonnes of soil / acre, tonnes of soil per acre within the sampled depth of the treated sample unit ($$su$$).
 
 ### Equation 9
 
 Gross tonnes of CO₂ removed from the atmosphere
 
 $$
+\tag{9}
 Gross\ tonnes\ CO_{2_{su}} = \frac{Tonnes\ CCE}{acre_{su}} \times \#\ of\ acres_{su} \times 0.44
 $$
 
 Where:
 
-- $$Gross\ tonnes\ CO_{2_{su}}$$ - in tonnes of CO₂, Tonnes of CO₂ removed from the atmosphere throughout the project time frame directly attributable to the treatment in a given sample unit ($$su$$)
-- $$\frac{Tonnes\ CCE}{acre_{su}}$$ - in tonnes of CCE / acre, Tonnes of CCE generation throughout the project timeframe directly attributable to the treatment in a given treated sample unit ($$su$$)
-- $$\#/ of\ acres_{su}$$ - in acres, Number of acres included in the treated sample unit
-- $$0.44$$ - Conversion of CaCO<sub>3</sub> to CO₂ based on the molecular weight (MW) of both compounds
+- $$Gross\ tonnes\ CO_{2_{su}}$$ - in tonnes of CO₂, Tonnes of CO₂ removed from the atmosphere throughout the project time frame directly attributable to the treatment in a given sample unit ($$su$$).
+- $$\frac{Tonnes\ CCE}{acre_{su}}$$ - in tonnes of CCE / acre, Tonnes of CCE generation throughout the project timeframe directly attributable to the treatment in a given treated sample unit ($$su$$).
+- $$\#/ of\ acres_{su}$$ - in acres, Number of acres included in the treated sample unit.
+- $$0.44$$ - Conversion of CaCO<sub>3</sub> to CO₂ based on the molecular weight (MW) of both compounds.
 
 ### Equation 10
 
 Net tonnes of CO₂ removed
 
 $$
-Net\ tonnes\ CO_{2_{su}} = Gross\ tonnes\ CO_{2_{su}} (1 - UNC) - LCA
+\tag{10}
+Net\ tonnes\ CO_{2_{su}} = Gross\ tonnes\ CO_{2_{su}} (1 - UNC) \\\ - LCA
 $$
 
 Where:
 
-- $$Gross\ tonnes\ CO_{2_{su}}$$ - in tonnes of CO₂, Tonnes of CO₂ removed from the atmosphere throughout the project time frame directly attributable to the treatment in a given sample unit ($$su$$)
-- $$UNC$$ - in %, 30% uncertainty discount
-- $$LCA$$ - in tonnes of CO₂, Tonnes of CO₂ emitted from project operations, determined by LCA
+- $$Gross\ tonnes\ CO_{2_{su}}$$ - in tonnes of CO₂, Tonnes of CO₂ removed from the atmosphere throughout the project time frame directly attributable to the treatment in a given sample unit ($$su$$).
+- $$UNC$$ - in %, 30% uncertainty discount.
+- $$LCA$$ - in tonnes of CO₂, Tonnes of CO₂ emitted from project operations, determined by LCA.
 
 ### Conservative factors
 
@@ -990,10 +1000,10 @@ All parameters should be collected for both treated project areas and baseline a
     <tr>
       <th>Description</th>
       <td>
-        The quantity of carbonate (CO32-) in the soil expressed as CaCO3 and as
-        a weight percentage of the less than 2 mm size fraction. CCE represents
-        all inorganic carbon molecules, including carbonate minerals and
-        bicarbonate.
+        The quantity of carbonate (CO<sub>3</sub>
+        <sup>2-</sup>) in the soil expressed as CaCO<sub>3</sub> and as a weight
+        percentage of the less than 2mm size fraction. CCE represents all inorganic
+        carbon molecules, including carbonate minerals and bicarbonate.
       </td>
     </tr>
     <tr>
@@ -1018,8 +1028,8 @@ All parameters should be collected for both treated project areas and baseline a
       <th>Monitoring frequency</th>
       <td>
         The project proponent should monitor CCE generation by taking soil
-        samples at multiple intervals throughout the season. See [Section 13.2](#sample-design-and-timing)
-        for details.
+        samples at multiple intervals throughout the season. See [Section
+        13.2](#sample-design-and-timing) for details.
       </td>
     </tr>
     <tr>
@@ -1277,13 +1287,13 @@ All parameters should be collected for both treated project areas and baseline a
 
 This report is to provide comprehensive information for the VVB while ensuring the protection of confidentiality for the farm operators involved. A table of information is provided for each treated sample unit (field stratum), with the following minimum data:
 
-- Relevant project dates (e.g., farm operator signing of carbon program agreement, date of microbial inoculant application)
-- Sampling dates and sampling point geolocations
-- SIC (CCE) generation in the treated sample unit
-- SIC (CCE) generation in linked baseline category
-- Acreage
-- Tonnes of carbon dioxide removed (credits generated)
-- Field location
+- Relevant project dates (e.g., farm operator signing of carbon program agreement, date of microbial inoculant application).
+- Sampling dates and sampling point geolocations.
+- SIC (CCE) generation in the treated sample unit.
+- SIC (CCE) generation in linked baseline category.
+- Acreage.
+- Tonnes of carbon dioxide removed (credits generated).
+- Field location.
 
 It should be noted that the report(s) may include additional elements from the monitoring plan as required or provide the entire plan, depending on specific needs. To protect the confidentiality of the farm operators, only a subset of this information will be made available to the public while ensuring the comprehensive reporting required for the VVB.
 
